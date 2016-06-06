@@ -9,6 +9,7 @@ $text-lighter: #255673;
 body {
 	background-color: $background;
 	color: $text;
+	font-family: 'Cabin', sans-serif;
 	.pagecontent {
 			min-width: 100%; 
 			min-height: 100vh;
@@ -22,15 +23,16 @@ body {
 		// -webkit-justify-content: center;
 		// justify-content: center;
 	}
-	h1, p {
+	h1, h2, p{
 		text-align: center;
 	}
 	ul.links {
-		margin: auto; 
+		margin: 2rem auto; 
 		display: block;
 		overflow: hidden;
 		max-width: 450px;
     -webkit-padding-start: 0px;
+
 		li {
 			display: inline-block;
 			width: 20%; 

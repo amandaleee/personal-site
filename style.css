@@ -1,14 +1,15 @@
 body {
   background-color: #b3cbd8;
-  color: #112c3c; }
+  color: #112c3c;
+  font-family: 'Cabin', sans-serif; }
   body .pagecontent {
     min-width: 100%;
     min-height: 100vh;
     padding-top: 50px; }
-  body h1, body p {
+  body h1, body h2, body p {
     text-align: center; }
   body ul.links {
-    margin: auto;
+    margin: 2rem auto;
     display: block;
     overflow: hidden;
     max-width: 450px;
