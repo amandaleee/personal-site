@@ -4,6 +4,9 @@ $background: #b3cbd8;
 $text: #112c3c; 
 $text-lighter: #255673;
 
+//mixins 
+$li_width: percentage(1/6);
+
 //styles 
 
 body {
@@ -14,14 +17,6 @@ body {
 			min-width: 100%; 
 			min-height: 100vh;
 			padding-top: 50px;
-		// display: -webkit-flex;
-		// display: flex;
-		// -webkit-flex-direction: row ;/* works with row or column */
-		// flex-direction: row;
-		// -webkit-align-items: center;
-		// align-items: center;
-		// -webkit-justify-content: center;
-		// justify-content: center;
 	}
 	h1, h2, p{
 		text-align: center;
@@ -32,12 +27,16 @@ body {
 		overflow: hidden;
 		max-width: 450px;
     -webkit-padding-start: 0px;
-
 		li {
 			display: inline-block;
-			width: 20%; 
+			width: $li_width;
 			float: left;
 			text-align: center;
+			@media (max-width: 768px) {
+				display: block; 
+				width: 100%;
+				padding: 10px 0;
+			}
 			a {
 				color: $text;
 			}
