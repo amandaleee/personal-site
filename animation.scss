@@ -1,9 +1,3 @@
-body {
-
-
-}
-
-
 // animation mixins
 
 
@@ -40,280 +34,382 @@ body {
 }
 
 
-@include keyframes(background-fade) {
-  0%   { background-color: blue; }
-  50%  { background-color: white; }
-  100% { background-color: blue; }
-}
+
+
+
+
+
 
 @include keyframes(background-move){
 	0% {
 		background: -moz-linear-gradient(45deg, 
-		rgba(255, 135, 135, .4) 0%, 
-		rgba(255, 200, 135, .4) 11%, 
-		rgba(248, 255, 135, .4) 22%, 
-		rgba(153, 255, 133, .4) 33%, 
-		rgba(133, 255, 219, .4) 44%, 
-		rgba(74, 232, 255, .4) 55%, 
-		rgba(74, 163, 255, .4) 66%, 
-		rgba(193, 137, 235, .4) 77%, 
-		rgba(255, 137, 235, .4) 88%, 
-		rgba(255, 135, 135, .4) 100%);
+			$red 0%, 
+			$orange 11%, 
+			$yellow 22%, 
+			$green 33%, 
+			$teal 44%, 
+			$blue 55%, 
+			$violet 66%, 
+			$purple 77%, 
+			$pink 88%, 
+			$red 100%);
 
 		background: -webkit-linear-gradient(45deg, 
-			rgba(255, 135, 135, .4) 0%, 
-			rgba(255, 200, 135, .4) 11%, 
-			rgba(248, 255, 135, .4) 22%, 
-			rgba(153, 255, 133, .4) 33%, 
-			rgba(133, 255, 219, .4) 44%, 
-			rgba(74, 232, 255, .4) 55%, 
-			rgba(74, 163, 255, .4) 66%, 
-			rgba(193, 137, 235, .4) 77%, 
-			rgba(255, 137, 235, .4) 88%, 
-			rgba(255, 135, 135, .4) 100%);
+			$red 0%, 
+			$orange 11%, 
+			$yellow 22%, 
+			$green 33%, 
+			$teal 44%, 
+			$blue 55%, 
+			$violet 66%, 
+			$purple 77%, 
+			$pink 88%, 
+			$red 100%);
 
 		background: linear-gradient(45deg, 
-			rgba(255, 135, 135, .4) 0%, 
-			rgba(255, 200, 135, .4) 11%, 
-			rgba(248, 255, 135, .4) 22%, 
-			rgba(153, 255, 133, .4) 33%, 
-			rgba(133, 255, 219, .4) 44%, 
-			rgba(74, 232, 255, .4) 55%, 
-			rgba(74, 163, 255, .4) 66%, 
-			rgba(193, 137, 235, .4) 77%, 
-			rgba(255, 137, 235, .4) 88%, 
-			rgba(255, 135, 135, .4) 100%);
+			$red 0%, 
+			$orange 11%, 
+			$yellow 22%, 
+			$green 33%, 
+			$teal 44%, 
+			$blue 55%, 
+			$violet 66%, 
+			$purple 77%, 
+			$pink 88%, 
+			$red 100%);
 	}
 	11% {
 		background: -moz-linear-gradient(45deg,  
-			rgba(255, 200, 135, .4) 0%, 
-			rgba(248, 255, 135, .4) 11%, 
-			rgba(153, 255, 133, .4) 22%, 
-			rgba(133, 255, 219, .4) 33%, 
-			rgba(74, 232, 255, .4) 44%, 
-			rgba(74, 163, 255, .4) 55%, 
-			rgba(193, 137, 235, .4) 66%, 
-			rgba(255, 137, 235, .4) 77%, 
-			rgba(255, 135, 135, .4) 88%,
-			rgba(255, 200, 135, .4) 100%);
+			$orange 0%, 
+			$yellow 11%, 
+			$green 22%, 
+			$teal 33%, 
+			$blue 44%, 
+			$violet 55%, 
+			$purple 66%, 
+			$pink 77%, 
+			$red 88%,
+			$orange 100%);
 
 		background: -webkit-linear-gradient(45deg, 
-			rgba(255, 200, 135, .4) 0%, 
-			rgba(248, 255, 135, .4) 11%, 
-			rgba(153, 255, 133, .4) 22%, 
-			rgba(133, 255, 219, .4) 33%, 
-			rgba(74, 232, 255, .4) 44%, 
-			rgba(74, 163, 255, .4) 55%, 
-			rgba(193, 137, 235, .4) 66%, 
-			rgba(255, 137, 235, .4) 77%, 
-			rgba(255, 135, 135, .4) 88%,
-			rgba(255, 200, 135, .4) 100%);
+			$orange 0%, 
+			$yellow 11%, 
+			$green 22%, 
+			$teal 33%, 
+			$blue 44%, 
+			$violet 55%, 
+			$purple 66%, 
+			$pink 77%, 
+			$red 88%,
+			$orange 100%);
 
 		background: linear-gradient(45deg, 
-			rgba(255, 200, 135, .4) 0%, 
-			rgba(248, 255, 135, .4) 11%, 
-			rgba(153, 255, 133, .4) 22%, 
-			rgba(133, 255, 219, .4) 33%, 
-			rgba(74, 232, 255, .4) 44%, 
-			rgba(74, 163, 255, .4) 55%, 
-			rgba(193, 137, 235, .4) 66%, 
-			rgba(255, 137, 235, .4) 77%, 
-			rgba(255, 135, 135, .4) 88%,
-			rgba(255, 200, 135, .4) 100%);
+			$orange 0%, 
+			$yellow 11%, 
+			$green 22%, 
+			$teal 33%, 
+			$blue 44%, 
+			$violet 55%, 
+			$purple 66%, 
+			$pink 77%, 
+			$red 88%,
+			$orange 100%);
 	}
 	22% {
 		background: -moz-linear-gradient(45deg,   
-			rgba(248, 255, 135, .4) 0%, 
-			rgba(153, 255, 133, .4) 11%, 
-			rgba(133, 255, 219, .4) 22%, 
-			rgba(74, 232, 255, .4) 33%, 
-			rgba(74, 163, 255, .4) 44%, 
-			rgba(193, 137, 235, .4) 55%, 
-			rgba(255, 137, 235, .4) 66%, 
-			rgba(255, 135, 135, .4) 77%,
-			rgba(255, 200, 135, .4) 88%, 
-			rgba(248, 255, 135, .4) 100%);
+			$yellow 0%, 
+			$green 11%, 
+			$teal 22%, 
+			$blue 33%, 
+			$violet 44%, 
+			$purple 55%, 
+			$pink 66%, 
+			$red 77%,
+			$orange 88%, 
+			$yellow 100%);
 
 		background: -webkit-linear-gradient(45deg, 
-			rgba(248, 255, 135, .4) 0%, 
-			rgba(153, 255, 133, .4) 11%, 
-			rgba(133, 255, 219, .4) 22%, 
-			rgba(74, 232, 255, .4) 33%, 
-			rgba(74, 163, 255, .4) 44%, 
-			rgba(193, 137, 235, .4) 55%, 
-			rgba(255, 137, 235, .4) 66%, 
-			rgba(255, 135, 135, .4) 77%,
-			rgba(255, 200, 135, .4) 88%, 
-			rgba(248, 255, 135, .4) 100%);
+			$yellow 0%, 
+			$green 11%, 
+			$teal 22%, 
+			$blue 33%, 
+			$violet 44%, 
+			$purple 55%, 
+			$pink 66%, 
+			$red 77%,
+			$orange 88%, 
+			$yellow 100%);
 
 		background: linear-gradient(45deg, 
-			rgba(248, 255, 135, .4) 0%, 
-			rgba(153, 255, 133, .4) 11%, 
-			rgba(133, 255, 219, .4) 22%, 
-			rgba(74, 232, 255, .4) 33%, 
-			rgba(74, 163, 255, .4) 44%, 
-			rgba(193, 137, 235, .4) 55%, 
-			rgba(255, 137, 235, .4) 66%, 
-			rgba(255, 135, 135, .4) 77%,
-			rgba(255, 200, 135, .4) 88%, 
-			rgba(248, 255, 135, .4) 100%);
+			$yellow 0%, 
+			$green 11%, 
+			$teal 22%, 
+			$blue 33%, 
+			$violet 44%, 
+			$purple 55%, 
+			$pink 66%, 
+			$red 77%,
+			$orange 88%, 
+			$yellow 100%);
 	}
 	33% {
 		background: -moz-linear-gradient(45deg,    
-			rgba(153, 255, 133, .4) 0%, 
-			rgba(133, 255, 219, .4) 11%, 
-			rgba(74, 232, 255, .4) 22%, 
-			rgba(74, 163, 255, .4) 33%, 
-			rgba(193, 137, 235, .4) 44%, 
-			rgba(255, 137, 235, .4) 55%, 
-			rgba(255, 135, 135, .4) 66%,
-			rgba(255, 200, 135, .4) 77%, 
-			rgba(248, 255, 135, .4) 88%,
-			rgba(153, 255, 133, .4) 100%);
+			$green 0%, 
+			$teal 11%, 
+			$blue 22%, 
+			$violet 33%, 
+			$purple 44%, 
+			$pink 55%, 
+			$red 66%,
+			$orange 77%, 
+			$yellow 88%,
+			$green 100%);
 
 		background: -webkit-linear-gradient(45deg, 
-			rgba(153, 255, 133, .4) 0%, 
-			rgba(133, 255, 219, .4) 11%, 
-			rgba(74, 232, 255, .4) 22%, 
-			rgba(74, 163, 255, .4) 33%, 
-			rgba(193, 137, 235, .4) 44%, 
-			rgba(255, 137, 235, .4) 55%, 
-			rgba(255, 135, 135, .4) 66%,
-			rgba(255, 200, 135, .4) 77%, 
-			rgba(248, 255, 135, .4) 88%,
-			rgba(153, 255, 133, .4) 100%);
+			$green 0%, 
+			$teal 11%, 
+			$blue 22%, 
+			$violet 33%, 
+			$purple 44%, 
+			$pink 55%, 
+			$red 66%,
+			$orange 77%, 
+			$yellow 88%,
+			$green 100%);
 
 		background: linear-gradient(45deg, 
-			rgba(153, 255, 133, .4) 0%, 
-			rgba(133, 255, 219, .4) 11%, 
-			rgba(74, 232, 255, .4) 22%, 
-			rgba(74, 163, 255, .4) 33%, 
-			rgba(193, 137, 235, .4) 44%, 
-			rgba(255, 137, 235, .4) 55%, 
-			rgba(255, 135, 135, .4) 66%,
-			rgba(255, 200, 135, .4) 77%, 
-			rgba(248, 255, 135, .4) 88%,
-			rgba(153, 255, 133, .4) 100%);
+			$green 0%, 
+			$teal 11%, 
+			$blue 22%, 
+			$violet 33%, 
+			$purple 44%, 
+			$pink 55%, 
+			$red 66%,
+			$orange 77%, 
+			$yellow 88%,
+			$green 100%);
 	}
 	44% {
 		background: -moz-linear-gradient(45deg,
-			rgba(133, 255, 219, .4) 0%, 
-			rgba(74, 232, 255, .4) 11%, 
-			rgba(74, 163, 255, .4) 22%, 
-			rgba(193, 137, 235, .4) 33%, 
-			rgba(255, 137, 235, .4) 44%, 
-			rgba(255, 135, 135, .4) 55%,
-			rgba(255, 200, 135, .4) 66%, 
-			rgba(248, 255, 135, .4) 77%,
-			rgba(153, 255, 133, .4) 88%, 
-			rgba(133, 255, 219, .4) 100%);
+			$teal 0%, 
+			$blue 11%, 
+			$violet 22%, 
+			$purple 33%, 
+			$pink 44%, 
+			$red 55%,
+			$orange 66%, 
+			$yellow 77%,
+			$green 88%, 
+			$teal 100%);
 
 		background: -webkit-linear-gradient(45deg, 
-			rgba(133, 255, 219, .4) 0%, 
-			rgba(74, 232, 255, .4) 11%, 
-			rgba(74, 163, 255, .4) 22%, 
-			rgba(193, 137, 235, .4) 33%, 
-			rgba(255, 137, 235, .4) 44%, 
-			rgba(255, 135, 135, .4) 55%,
-			rgba(255, 200, 135, .4) 66%, 
-			rgba(248, 255, 135, .4) 77%,
-			rgba(153, 255, 133, .4) 88%, 
-			rgba(133, 255, 219, .4) 100%);
+			$teal 0%, 
+			$blue 11%, 
+			$violet 22%, 
+			$purple 33%, 
+			$pink 44%, 
+			$red 55%,
+			$orange 66%, 
+			$yellow 77%,
+			$green 88%, 
+			$teal 100%);
 
 		background: linear-gradient(45deg, 
-			rgba(133, 255, 219, .4) 0%, 
-			rgba(74, 232, 255, .4) 11%, 
-			rgba(74, 163, 255, .4) 22%, 
-			rgba(193, 137, 235, .4) 33%, 
-			rgba(255, 137, 235, .4) 44%, 
-			rgba(255, 135, 135, .4) 55%,
-			rgba(255, 200, 135, .4) 66%, 
-			rgba(248, 255, 135, .4) 77%,
-			rgba(153, 255, 133, .4) 88%, 
-			rgba(133, 255, 219, .4) 100%);
+			$teal 0%, 
+			$blue 11%, 
+			$violet 22%, 
+			$purple 33%, 
+			$pink 44%, 
+			$red 55%,
+			$orange 66%, 
+			$yellow 77%,
+			$green 88%, 
+			$teal 100%);
 	}
 	55% {
 		background: -moz-linear-gradient(45deg,
-			rgba(74, 232, 255, .4) 0%, 
-			rgba(74, 163, 255, .4) 11%, 
-			rgba(193, 137, 235, .4) 22%, 
-			rgba(255, 137, 235, .4) 33%, 
-			rgba(255, 135, 135, .4) 44%,
-			rgba(255, 200, 135, .4) 55%, 
-			rgba(248, 255, 135, .4) 66%,
-			rgba(153, 255, 133, .4) 77%, 
-			rgba(133, 255, 219, .4) 88%, 
-			rgba(74, 232, 255, .4) 100%);
+			$blue 0%, 
+			$violet 11%, 
+			$purple 22%, 
+			$pink 33%, 
+			$red 44%,
+			$orange 55%, 
+			$yellow 66%,
+			$green 77%, 
+			$teal 88%, 
+			$blue 100%);
 
 		background: -webkit-linear-gradient(45deg, 
-			rgba(74, 232, 255, .4) 0%, 
-			rgba(74, 163, 255, .4) 11%, 
-			rgba(193, 137, 235, .4) 22%, 
-			rgba(255, 137, 235, .4) 33%, 
-			rgba(255, 135, 135, .4) 44%,
-			rgba(255, 200, 135, .4) 55%, 
-			rgba(248, 255, 135, .4) 66%,
-			rgba(153, 255, 133, .4) 77%, 
-			rgba(133, 255, 219, .4) 88%, 
-			rgba(74, 232, 255, .4) 100%);
+			$blue 0%, 
+			$violet 11%, 
+			$purple 22%, 
+			$pink 33%, 
+			$red 44%,
+			$orange 55%, 
+			$yellow 66%,
+			$green 77%, 
+			$teal 88%, 
+			$blue 100%);
 
 		background: linear-gradient(45deg, 
-			rgba(74, 232, 255, .4) 0%, 
-			rgba(74, 163, 255, .4) 11%, 
-			rgba(193, 137, 235, .4) 22%, 
-			rgba(255, 137, 235, .4) 33%, 
-			rgba(255, 135, 135, .4) 44%,
-			rgba(255, 200, 135, .4) 55%, 
-			rgba(248, 255, 135, .4) 66%,
-			rgba(153, 255, 133, .4) 77%, 
-			rgba(133, 255, 219, .4) 88%, 
-			rgba(74, 232, 255, .4) 100%);
+			$blue 0%, 
+			$violet 11%, 
+			$purple 22%, 
+			$pink 33%, 
+			$red 44%,
+			$orange 55%, 
+			$yellow 66%,
+			$green 77%, 
+			$teal 88%, 
+			$blue 100%);
 	}
-	// 66% {
-	
-	// }
-	// 77% {
-		
-	// }
-	// 88% {
-		
-	// }
+	66% {
+		background: -moz-linear-gradient(45deg, 
+			$violet 0%, 
+			$purple 11%, 
+			$pink 22%, 
+			$red 33%,
+			$orange 44%, 
+			$yellow 55%,
+			$green 66%, 
+			$teal 77%, 
+			$blue 88%,
+			$violet 100%);
+
+		background: -webkit-linear-gradient(45deg, 
+			$violet 0%, 
+			$purple 11%, 
+			$pink 22%, 
+			$red 33%,
+			$orange 44%, 
+			$yellow 55%,
+			$green 66%, 
+			$teal 77%, 
+			$blue 88%,
+			$violet 100%);
+
+		background: linear-gradient(45deg, 
+			$violet 0%, 
+			$purple 11%, 
+			$pink 22%, 
+			$red 33%,
+			$orange 44%, 
+			$yellow 55%,
+			$green 66%, 
+			$teal 77%, 
+			$blue 88%,
+			$violet 100%);
+	}
+	77% {
+		background: -moz-linear-gradient(45deg,  
+			$purple 0%, 
+			$pink 11%, 
+			$red 22%,
+			$orange 33%, 
+			$yellow 44%,
+			$green 55%, 
+			$teal 66%, 
+			$blue 77%,
+			$violet 88%,
+			$purple 100%);
+
+		background: -webkit-linear-gradient(45deg, 
+			$purple 0%, 
+			$pink 11%, 
+			$red 22%,
+			$orange 33%, 
+			$yellow 44%,
+			$green 55%, 
+			$teal 66%, 
+			$blue 77%,
+			$violet 88%,
+			$purple 100%);
+
+		background: linear-gradient(45deg, 
+			$purple 0%, 
+			$pink 11%, 
+			$red 22%,
+			$orange 33%, 
+			$yellow 44%,
+			$green 55%, 
+			$teal 66%, 
+			$blue 77%,
+			$violet 88%,
+			$purple 100%);
+	}
+	88% {
+		background: -moz-linear-gradient(45deg,  
+			$pink 0%, 
+			$red 11%,
+			$orange 22%, 
+			$yellow 33%,
+			$green 44%, 
+			$teal 55%, 
+			$blue 66%,
+			$violet 77%,
+			$purple 88%,
+			$pink 100%);
+
+		background: -webkit-linear-gradient(45deg, 
+			$pink 0%, 
+			$red 11%,
+			$orange 22%, 
+			$yellow 33%,
+			$green 44%, 
+			$teal 55%, 
+			$blue 66%,
+			$violet 77%,
+			$purple 88%,
+			$pink 100%);
+
+		background: linear-gradient(45deg, 
+			$pink 0%, 
+			$red 11%,
+			$orange 22%, 
+			$yellow 33%,
+			$green 44%, 
+			$teal 55%, 
+			$blue 66%,
+			$violet 77%,
+			$purple 88%,
+			$pink 100%);
+	}
 	100% {
 		background: -moz-linear-gradient(45deg, 
-		rgba(255, 135, 135, .4) 0%, 
-		rgba(255, 200, 135, .4) 11%, 
-		rgba(248, 255, 135, .4) 22%, 
-		rgba(153, 255, 133, .4) 33%, 
-		rgba(133, 255, 219, .4) 44%, 
-		rgba(74, 232, 255, .4) 55%, 
-		rgba(74, 163, 255, .4) 66%, 
-		rgba(193, 137, 235, .4) 77%, 
-		rgba(255, 137, 235, .4) 88%, 
-		rgba(255, 135, 135, .4) 100%);
+		$red 0%, 
+		$orange 11%, 
+		$yellow 22%, 
+		$green 33%, 
+		$teal 44%, 
+		$blue 55%, 
+		$violet 66%, 
+		$purple 77%, 
+		$pink 88%, 
+		$red 100%);
 
 		background: -webkit-linear-gradient(45deg, 
-			rgba(255, 135, 135, .4) 0%, 
-			rgba(255, 200, 135, .4) 11%, 
-			rgba(248, 255, 135, .4) 22%, 
-			rgba(153, 255, 133, .4) 33%, 
-			rgba(133, 255, 219, .4) 44%, 
-			rgba(74, 232, 255, .4) 55%, 
-			rgba(74, 163, 255, .4) 66%, 
-			rgba(193, 137, 235, .4) 77%, 
-			rgba(255, 137, 235, .4) 88%, 
-			rgba(255, 135, 135, .4) 100%);
+			$red 0%, 
+			$orange 11%, 
+			$yellow 22%, 
+			$green 33%, 
+			$teal 44%, 
+			$blue 55%, 
+			$violet 66%, 
+			$purple 77%, 
+			$pink 88%, 
+			$red 100%);
 
 		background: linear-gradient(45deg, 
-			rgba(255, 135, 135, .4) 0%, 
-			rgba(255, 200, 135, .4) 11%, 
-			rgba(248, 255, 135, .4) 22%, 
-			rgba(153, 255, 133, .4) 33%, 
-			rgba(133, 255, 219, .4) 44%, 
-			rgba(74, 232, 255, .4) 55%, 
-			rgba(74, 163, 255, .4) 66%, 
-			rgba(193, 137, 235, .4) 77%, 
-			rgba(255, 137, 235, .4) 88%, 
-			rgba(255, 135, 135, .4) 100%);
+			$red 0%, 
+			$orange 11%, 
+			$yellow 22%, 
+			$green 33%, 
+			$teal 44%, 
+			$blue 55%, 
+			$violet 66%, 
+			$purple 77%, 
+			$pink 88%, 
+			$red 100%);
 	}
 }
 
