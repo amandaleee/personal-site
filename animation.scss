@@ -1,43 +1,87 @@
 body {
-	background: #ff8787;
+	// background: #ff8787;
 
-	background: -moz-linear-gradient(45deg, 
-		rgba(255, 135, 135, 1) 0%, 
-		rgba(255, 200, 135, 1) 11%, 
-		rgba(248, 255, 135, 1) 22%, 
-		rgba(153, 255, 133, 1) 33%, 
-		rgba(133, 255, 219, 1) 44%, 
-		rgba(74, 232, 255, 1) 55%, 
-		rgba(74, 163, 255, 1) 66%, 
-		rgba(193, 137, 235, 1) 77%, 
-		rgba(255, 137, 235, 1) 88%, 
-		rgba(255, 135, 135, 1) 100%);
+	// background: -moz-linear-gradient(45deg, 
+	// 	rgba(255, 135, 135, 1) 0%, 
+	// 	rgba(255, 200, 135, 1) 11%, 
+	// 	rgba(248, 255, 135, 1) 22%, 
+	// 	rgba(153, 255, 133, 1) 33%, 
+	// 	rgba(133, 255, 219, 1) 44%, 
+	// 	rgba(74, 232, 255, 1) 55%, 
+	// 	rgba(74, 163, 255, 1) 66%, 
+	// 	rgba(193, 137, 235, 1) 77%, 
+	// 	rgba(255, 137, 235, 1) 88%, 
+	// 	rgba(255, 135, 135, 1) 100%);
 
-	background: -webkit-linear-gradient(45deg, 
-		rgba(255, 135, 135, 1) 0%, 
-		rgba(255, 200, 135, 1) 11%, 
-		rgba(248, 255, 135, 1) 22%, 
-		rgba(153, 255, 133, 1) 33%, 
-		rgba(133, 255, 219, 1) 44%, 
-		rgba(74, 232, 255, 1) 55%, 
-		rgba(74, 163, 255, 1) 66%, 
-		rgba(193, 137, 235, 1) 77%, 
-		rgba(255, 137, 235, 1) 88%, 
-		rgba(255, 135, 135, 1) 100%);
+	// background: -webkit-linear-gradient(45deg, 
+	// 	rgba(255, 135, 135, 1) 0%, 
+	// 	rgba(255, 200, 135, 1) 11%, 
+	// 	rgba(248, 255, 135, 1) 22%, 
+	// 	rgba(153, 255, 133, 1) 33%, 
+	// 	rgba(133, 255, 219, 1) 44%, 
+	// 	rgba(74, 232, 255, 1) 55%, 
+	// 	rgba(74, 163, 255, 1) 66%, 
+	// 	rgba(193, 137, 235, 1) 77%, 
+	// 	rgba(255, 137, 235, 1) 88%, 
+	// 	rgba(255, 135, 135, 1) 100%);
 
-	background: linear-gradient(45deg, 
-		rgba(255, 135, 135, 1) 0%, 
-		rgba(255, 200, 135, 1) 11%, 
-		rgba(248, 255, 135, 1) 22%, 
-		rgba(153, 255, 133, 1) 33%, 
-		rgba(133, 255, 219, 1) 44%, 
-		rgba(74, 232, 255, 1) 55%, 
-		rgba(74, 163, 255, 1) 66%, 
-		rgba(193, 137, 235, 1) 77%, 
-		rgba(255, 137, 235, 1) 88%, 
-		rgba(255, 135, 135, 1) 100%);
+	// background: linear-gradient(45deg, 
+	// 	rgba(255, 135, 135, 1) 0%, 
+	// 	rgba(255, 200, 135, 1) 11%, 
+	// 	rgba(248, 255, 135, 1) 22%, 
+	// 	rgba(153, 255, 133, 1) 33%, 
+	// 	rgba(133, 255, 219, 1) 44%, 
+	// 	rgba(74, 232, 255, 1) 55%, 
+	// 	rgba(74, 163, 255, 1) 66%, 
+	// 	rgba(193, 137, 235, 1) 77%, 
+	// 	rgba(255, 137, 235, 1) 88%, 
+	// 	rgba(255, 135, 135, 1) 100%);
 	
 }
 
 
-//
+// animation mixins
+
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+@include keyframes(background-fade) {
+  0%   { background-color: blue; }
+  50%  { background-color: white; }
+  100% { background-color: blue; }
+}
+
+body {
+  @include animation('background-fade .5s 1');
+} 
