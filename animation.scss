@@ -1,6 +1,4 @@
 // animation mixins
-
-
 @mixin animation($animate...) {
     $max: length($animate);
     $animations: '';
@@ -32,12 +30,6 @@
         @content;
     }
 }
-
-
-
-
-
-
 
 
 @include keyframes(background-move){
@@ -414,5 +406,5 @@
 }
 
 body {
-  @include animation('background-move 5s infinite');
+  @include animation('background-move 1s infinite');
 } 
