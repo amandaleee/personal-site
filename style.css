@@ -15,13 +15,13 @@ body {
     text-align: center;
     font-family: "Cabin", sans-serif; }
   body ul.links {
-    max-width: 450px; }
+    max-width: 450px;
+    -webkit-padding-start: 0px; }
     body ul.links li {
       display: inline-block;
       width: 20%;
       float: left;
-      text-align: center;
-      -webkit-padding-start: 0px; }
+      text-align: center; }
       @media (max-width: 768px) {
         body ul.links li {
           display: block;

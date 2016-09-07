@@ -31,12 +31,13 @@ body {
 	ul.links {
 		@extend .list;
 		max-width: 450px;
+		-webkit-padding-start: 0px;
 		li {
 			display: inline-block;
 			width: $li_width;
 			float: left;
 			text-align: center;
-			-webkit-padding-start: 0px;
+			
 			@media (max-width: 768px) {
 				display: block; 
 				width: 100%;
