@@ -1,50 +1,42 @@
-body {
-  background-color: #b3cbd8;
-  color: #112c3c;
-  font-family: 'Cabin', sans-serif; }
-.pagecontent {
-    min-width: 100%;
-    min-height: 100vh;
-    padding-top: 50px; 
-}
-h1, h2, h3,  p {
-    text-align: center; 
-}
-.now {
-  display: block; 
-  margin: auto; 
-  width: 50%; 
-  min-width: 300px; 
-}
-ul.now li {
-  text-align: left;
-  width: 40%;
-  min-width: 300px; 
-  list-style-type: none;
-}
-ul.links {
+.list, body ul.links, body ul.now {
   margin: 2rem auto;
   display: block;
-  overflow: hidden;
-  max-width: 450px;
-  -webkit-padding-start: 0px; 
-}
- ul.links li {
-  display: inline-block;
-  width: 20%;
-  float: left;
-  text-align: center; 
-}
-ul.links li a {
-  color: #112c3c; 
-}
-@media (max-width: 768px) {
-  ul.links li {
-    display: block;
-    width: 100%;
-    padding: 10px 0; 
-    } 
-}
+  overflow: hidden; }
 
+body {
+  background-color: #f0f1f3;
+  color: #112c3c;
+  font-family: "Noto Serif", serif; }
+  body .pagecontent {
+    min-width: 100%;
+    min-height: 100vh;
+    padding-top: 50px; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    text-align: center;
+    font-family: "Cabin", sans-serif; }
+  body ul.links {
+    max-width: 450px; }
+    body ul.links li {
+      display: inline-block;
+      width: 20%;
+      float: left;
+      text-align: center;
+      -webkit-padding-start: 0px; }
+      @media (max-width: 768px) {
+        body ul.links li {
+          display: block;
+          width: 100%;
+          padding: 10px 0; } }
+      body ul.links li a {
+        color: #112c3c; }
+  body ul.now {
+    max-width: 600px; }
+    body ul.now li {
+      margin-bottom: 1.5rem;
+      text-align: left;
+      list-style-type: disc; }
+  body .t-center {
+    display: block;
+    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

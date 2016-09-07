@@ -1,37 +1,42 @@
 //vars 
 
-$background: #b3cbd8;
+$background: #f0f1f3;
 $text: #112c3c; 
 $text-lighter: #255673;
+$heading-font: 'Cabin', sans-serif;
+$body-font:  'Noto Serif', serif;
 
 //mixins 
-$li_width: percentage(1/6);
-
+$li_width: percentage(1/5);
+.list {
+	margin: 2rem auto; 
+	display: block; 
+	overflow: hidden; 
+}
 //styles 
 
 body {
 	background-color: $background;
 	color: $text;
-	font-family: 'Cabin', sans-serif;
+	font-family: $body-font;
 	.pagecontent {
 			min-width: 100%; 
 			min-height: 100vh;
 			padding-top: 50px;
 	}
-	h1, h2, h3, p, ul.now {
+	h1, h2, h3, h4, h5, h6 {
 		text-align: center;
+		font-family: $heading-font;
 	}
 	ul.links {
-		margin: 2rem auto; 
-		display: block;
-		overflow: hidden;
+		@extend .list;
 		max-width: 450px;
-    -webkit-padding-start: 0px;
 		li {
 			display: inline-block;
 			width: $li_width;
 			float: left;
 			text-align: center;
+			-webkit-padding-start: 0px;
 			@media (max-width: 768px) {
 				display: block; 
 				width: 100%;
@@ -43,6 +48,16 @@ body {
 		}
 	}
 	ul.now {
-		
+		@extend .list; 
+		max-width: 600px; 
+		li {
+			margin-bottom: 1.5rem;
+			text-align: left; 
+			list-style-type: disc;
+		}
+	}
+	.t-center {
+		display: block; 
+		text-align: center;
 	}
 }
